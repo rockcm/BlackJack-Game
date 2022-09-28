@@ -60,7 +60,7 @@ namespace Project2
             {
                 msg += $"\n{c.ToString()}";
             }
-            return "";
+            return msg;
 
         }
     }
