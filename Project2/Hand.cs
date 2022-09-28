@@ -1,4 +1,18 @@
-﻿using Project2;
+﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////
+//
+// Project: Lab2
+// File Name: Hand.cs
+// Description: Creates a hand that is composed of a card array.  
+// Course: CSCI 1260 – Introduction to Computer Science II
+// Author: Christian Rock
+// Created: 09/14/22
+// Copyright: Christian Rock, 2022
+//
+////////////////////////////////////////////////////////////////////////////////////////////////////////
+//////////
+
+using Project2;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;

@@ -2,7 +2,7 @@
 //////////
 //
 // Project: Lab2
-// File Name: Driver.cs
+// File Name: DeckDriver.cs
 // Description: Lab1 
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
@@ -54,8 +54,29 @@ Console.WriteLine("------------");
 Console.WriteLine();
 
 int UserInput;
-Console.WriteLine("What size hand?");
+Console.WriteLine("How many players are there? ");
 UserInput = Convert.ToInt32(Console.ReadLine());
-Hand PlayerHand = new Hand(UserInput);
-PlayerHand = Deck2.DealAHand(UserInput);
+
+int UserInput2;
+Console.WriteLine("How many cards are in each Hand? ");
+UserInput2 = Convert.ToInt32(Console.ReadLine());
+
+for (int i = 0; i < UserInput; i++)
+{
+    if (Deck.NextCard < 52)
+    {
+        Console.WriteLine($"Hand {i + 1}");
+        Console.WriteLine(Deck.DealAHand(UserInput2));
+    }
+
+    
+    
+}
+
+
+
+/*
+Hand PlayerHand = new Hand(UserInputHandSize);
+PlayerHand = Deck2.DealAHand(UserInputHandSize);
 Console.WriteLine(PlayerHand);
+*/

@@ -3,7 +3,7 @@
 //
 // Project: Lab2
 // File Name: Deck.cs
-// Description: Ceates a Card
+// Description: Creates deck composed of card obects. 
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
 // Created: 09/14/22
