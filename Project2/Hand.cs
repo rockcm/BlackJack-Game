@@ -19,45 +19,48 @@ namespace Project2
         public Hand()
         {
             HandSize = 5;
-            CardsInHand = 5;
+            CardsInHand = 0;
             GameHand = new Card[HandSize];
-            for (int i = 0; i < GameHand.Length; i++)
-            {
-                GameHand[i] = new Card(i);
-            }
+            
         }
 
         public Hand(int handSize)
         {
-            GameHand = new Card[HandSize];
-            CardsInHand = handSize;
-            for (int i = 0; i < HandSize; i++)
-            {
-                GameHand[i] = new Card(i);
-
-                if (HandSize > 52)
-                {
-                    Console.WriteLine("Please enter number under 52");
-                }
-            }
+            CardsInHand = 0;
+            HandSize = handSize;
+            GameHand = new Card[handSize];
+           
 
         }
 
         public Hand(Hand existingHand)
         {
-            CardsInHand = existingHand.HandSize;
+            HandSize = existingHand.HandSize;
             for (int i = 0; i < existingHand.GameHand.Length;)
             {
                 existingHand.GameHand[i] = GameHand[i];
             }
-
+            
         }
 
         public void AddCard(Card Card)
         {
-
-            GameHand[GameHand.Length - 1] = new Card(Card);
+            Card c = new Card(Card);
+            GameHand[CardsInHand] = c;
             CardsInHand++;
+           
+
+        }
+
+        
+        public override string ToString()
+        {
+            string msg = "";
+            foreach (Card c in GameHand)
+            {
+                msg += $"\n{c.ToString()}";
+            }
+            return "";
 
         }
     }

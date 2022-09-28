@@ -64,7 +64,7 @@ namespace Project2
             DeckCards = new Card[52];// makes DeckCards a card array of size 52.
             for (int i = 0; i < DeckCards.Length; i++) // for loop for deep copy
             {
-
+                
                 DeckCards[i] = ExistingDeck.DeckCards[i]; // fills the array with 52 card objects, this is done by copying the object from the Card Array that has already been created into a new card array.
 
             }
@@ -99,10 +99,14 @@ namespace Project2
 
 
 
-            NextCard++;
+            
             if (NextCard < DeckCards.Length) // if statement that allows us to deal the card in the next card position 
             {
-                return DeckCards[NextCard];
+                Card c = new Card();
+                c = DeckCards[NextCard];
+                NextCard++;
+                return c;
+
             }
             else return null;
 
@@ -122,9 +126,9 @@ namespace Project2
             Hand Hand1 = new Hand(handSize);
             for (int i = 0; i < handSize; i++)
             {
-                Card c = DealACard();
-                Hand1.AddCard(DealACard());
 
+                Hand1.AddCard(DealACard());
+                
             }
 
             return Hand1;

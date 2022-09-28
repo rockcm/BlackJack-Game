@@ -30,7 +30,6 @@ Deck Deck = new Deck();
 
 /// Displays the deck object. 
 Console.WriteLine(Deck);
-
 /// Shuffles the deck and then displays the shuffled deck. 
 Deck.Shuffle();
 Console.WriteLine("------------");
