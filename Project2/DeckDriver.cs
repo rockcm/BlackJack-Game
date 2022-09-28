@@ -57,4 +57,5 @@ int UserInput;
 Console.WriteLine("What size hand?");
 UserInput = Convert.ToInt32(Console.ReadLine());
 Hand PlayerHand = new Hand(UserInput);
+PlayerHand = Deck2.DealAHand(UserInput);
 Console.WriteLine(PlayerHand);
