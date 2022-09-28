@@ -1,7 +1,7 @@
 ﻿////////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////
 //
-// Project: Lab2
+// Project: Project2
 // File Name: Suit.cs
 // Description: Enum suits, has availbles suites in file.
 // Course: CSCI 1260 – Introduction to Computer Science II

@@ -1,7 +1,7 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////
 //
-// Project: Lab2
+// Project: Project2
 // File Name: Deck.cs
 // Description: Creates deck composed of card obects. 
 // Course: CSCI 1260 – Introduction to Computer Science II
@@ -57,7 +57,7 @@ namespace Project2
         /// <summary>
         /// Copy constructor that takes an existing deck as a parameter and copys it to another card array.  
         /// </summary>
-        /// <param name="ExistingDeck"></param>
+        /// <param name="ExistingDeck"> A value for a deck object that has already been created to pass to the copy constructor</param>
         public Deck(Deck ExistingDeck)
         {
 

@@ -1,12 +1,12 @@
 ﻿///////////////////////////////////////////////////////////////////////////////////////////////////////
 //////////
 //
-// Project: Lab2
+// Project: Project2
 // File Name: Hand.cs
 // Description: Creates a hand that is composed of a card array.  
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
-// Created: 09/14/22
+// Created: 09/21/22
 // Copyright: Christian Rock, 2022
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -22,15 +22,21 @@ using System.Threading.Tasks;
 
 namespace Project2
 {
+    /// <summary>
+    /// Hand class that is composed of a card array. 
+    /// This class is used in the driver to create hands and have cards dealt into those hands.
+    /// </summary>
     public class Hand
     {
-        public Card[] GameHand { get; set; }
-        public int HandSize { get; set; }
-        public int CardsInHand { get; set; }
+        public Card[] GameHand { get; set; } // Creating a card array attribute
+        public int HandSize { get; set; } // integer attribute to dictate hand size. 
+        public int CardsInHand { get; set; } // integer attribute to keep track of how many cards have been dealt to a hand/
 
 
-
-        public Hand()
+        /// <summary>
+        /// Default constructor for hand class, that creates a hand from default values.  
+        /// </summary>
+        public Hand() 
         {
             HandSize = 5;
             CardsInHand = 0;
@@ -38,6 +44,10 @@ namespace Project2
             
         }
 
+        /// <summary>
+        /// Parameterized Constructor that takes in a integer for the handsize and creates a card array of that size for cards to be dealt to. 
+        /// </summary>
+        /// <param name="handSize"> the value that will be used to determine what the hand size is </param>
         public Hand(int handSize)
         {
             CardsInHand = 0;
@@ -47,6 +57,10 @@ namespace Project2
 
         }
 
+        /// <summary>
+        /// Copy constructor for the hand class that takes in a existing hand and copys those values to a new hand. 
+        /// </summary>
+        /// <param name="existingHand"></param>
         public Hand(Hand existingHand)
         {
             HandSize = existingHand.HandSize;
@@ -57,6 +71,10 @@ namespace Project2
             
         }
 
+        /// <summary>
+        /// Method that is uesd to add a card to a hand, used in the DealAHand method.
+        /// </summary>
+        /// <param name="Card"> the value of the card that is getting added to the hand.</param>
         public void AddCard(Card Card)
         {
             Card c = new Card(Card);
@@ -66,7 +84,10 @@ namespace Project2
 
         }
 
-        
+        /// <summary>
+        /// to string that allows for the hand to be displayed coreectly and in an aesthetically pleasing manner.
+        /// </summary>
+        /// <returns> returns all the card values in a hand</returns>
         public override string ToString()
         {
             string msg = "";
