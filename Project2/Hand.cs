@@ -64,7 +64,7 @@ namespace Project2
         public Hand(Hand existingHand)
         {
             HandSize = existingHand.HandSize;
-            for (int i = 0; i < existingHand.GameHand.Length;)
+            for (int i = 0; i < existingHand.GameHand.Length;) 
             {
                 GameHand[i] = existingHand.GameHand[i];
             }
@@ -93,7 +93,7 @@ namespace Project2
         public override string ToString()
         {
             string msg = "";
-            foreach (Card c in GameHand)
+            foreach (Card c in GameHand) // prints each card in the gamehand 
             {
                 msg += $"\n{c.ToString()}";
             }

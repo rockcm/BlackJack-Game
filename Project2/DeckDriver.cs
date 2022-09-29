@@ -25,8 +25,10 @@ using Project2;
 using System.Runtime.CompilerServices;
 
 
-/// Creates a new Deck object.
-Deck Deck = new Deck();
+
+Deck Deck = new Deck(); /// Creates a new Deck object.
+int UserInput; // input for the amount of players 
+int UserInput2; // input for the amount of cards in each players hand.
 
 
 /// Displays the deck object. 
@@ -51,28 +53,30 @@ Console.WriteLine("------------");
 Console.WriteLine("Hand 2:");
 Console.WriteLine(Deck2.DealAHand(7));
 
+// just to keep code clean
 Console.WriteLine("------------");
 Console.WriteLine();
 
-int UserInput;
-int UserInput2;
 
-Deck.Shuffle();
+
+Deck.Shuffle(); // make sure deck is shuffled for upcoming game hands
+
+// do while loop to ensure cards being dealt do not exceed deck's limit.
 do
 {
-    Console.WriteLine("How many players are there? ");
+    Console.WriteLine("How many players are there? "); // prompts user for amount of players and stores that in a variable. 
     UserInput = Convert.ToInt32(Console.ReadLine());
 
 
-    Console.WriteLine("How many cards are in each Hand? ");
+    Console.WriteLine("How many cards are in each Hand? "); // prompts user for amount of cards in each hand and stores that in a variable. 
     UserInput2 = Convert.ToInt32(Console.ReadLine());
 
-    if (UserInput * UserInput2 > Deck.DeckCards.Length)
+    if (UserInput * UserInput2 > Deck.DeckCards.Length) // if statement for if the users hands dealt exceeds decks card limit
     {
         Console.WriteLine("CARDS DEALT WILL EXCEED 52");
     } 
 
-} while (UserInput * UserInput2 > Deck.DeckCards.Length);
+} while (UserInput * UserInput2 > Deck.DeckCards.Length); // continues to loop if card amount to be dealt is not less than 52.
 
 // for loop that deals a hand according to how many players were entered and how many cards are in each hand that was entered. 
 for (int i = 0; i < UserInput; i++)
@@ -86,10 +90,3 @@ for (int i = 0; i < UserInput; i++)
  
 }
 
-
-
-/*
-Hand PlayerHand = new Hand(UserInputHandSize);
-PlayerHand = Deck2.DealAHand(UserInputHandSize);
-Console.WriteLine(PlayerHand);
-*/
