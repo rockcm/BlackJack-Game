@@ -54,26 +54,36 @@ Console.WriteLine(Deck2.DealAHand(7));
 Console.WriteLine("------------");
 Console.WriteLine();
 
+int UserInput;
+int UserInput2;
 
-int UserInput; // value that user enters for amount of players
-Console.WriteLine("How many players are there? ");
-UserInput = Convert.ToInt32(Console.ReadLine());
+Deck.Shuffle();
+do
+{
+    Console.WriteLine("How many players are there? ");
+    UserInput = Convert.ToInt32(Console.ReadLine());
 
-int UserInput2; // value for the amount of cards in each hand.
-Console.WriteLine("How many cards are in each Hand? ");
-UserInput2 = Convert.ToInt32(Console.ReadLine());
+
+    Console.WriteLine("How many cards are in each Hand? ");
+    UserInput2 = Convert.ToInt32(Console.ReadLine());
+
+    if (UserInput * UserInput2 > Deck.DeckCards.Length)
+    {
+        Console.WriteLine("CARDS DEALT WILL EXCEED 52");
+    } 
+
+} while (UserInput * UserInput2 > Deck.DeckCards.Length);
 
 // for loop that deals a hand according to how many players were entered and how many cards are in each hand that was entered. 
 for (int i = 0; i < UserInput; i++)
 {
-    if (Deck.NextCard < 52)
-    {
+   
+    
         Console.WriteLine($"Hand {i + 1}"); // prints which players hand is being displyed below. 
         Console.WriteLine(Deck.DealAHand(UserInput2)); // prints out the hand for the player
-    }
-
     
     
+ 
 }
 
 

@@ -99,7 +99,7 @@ namespace Project2
 
 
 
-            
+
             if (NextCard < DeckCards.Length) // if statement that allows us to deal the card in the next card position 
             {
                 Card c = new Card();
@@ -132,6 +132,12 @@ namespace Project2
             }
 
             return Hand1;
+        }
+
+
+        public int CardsLeft()
+        {
+            return 52 - NextCard;
         }
 
         /// <summary>

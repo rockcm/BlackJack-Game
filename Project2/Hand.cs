@@ -66,8 +66,9 @@ namespace Project2
             HandSize = existingHand.HandSize;
             for (int i = 0; i < existingHand.GameHand.Length;)
             {
-                existingHand.GameHand[i] = GameHand[i];
+                GameHand[i] = existingHand.GameHand[i];
             }
+           
             
         }
 
@@ -80,6 +81,7 @@ namespace Project2
             Card c = new Card(Card);
             GameHand[CardsInHand] = c;
             CardsInHand++;
+            
            
 
         }
