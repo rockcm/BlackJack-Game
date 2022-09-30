@@ -46,7 +46,7 @@ namespace Project2
         }
 
         /// <summary>
-        /// Parameterized Constructor that takes in a integer for the handsize and creates a card array of that size for cards to be dealt to. 
+        /// Parameterized Constructor that takes in a integer for the handsize and creates an array of that size for cards to be dealt to. 
         /// </summary>
         /// <param name="handSize"> the value that will be used to determine what the hand size is </param>
         public Hand(int handSize)

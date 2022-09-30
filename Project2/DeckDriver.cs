@@ -84,7 +84,7 @@ for (int i = 0; i < UserInput; i++)
 {
    
     
-        Console.WriteLine($"Hand {i + 1}"); // prints which players hand is being displyed below. 
+        Console.WriteLine($"\nHand {i + 1}"); // prints which players hand is being displyed below. 
         Console.WriteLine(Deck.DealAHand(UserInput2)); // prints out the hand for the player
     
     
