@@ -38,6 +38,7 @@ namespace Project2
         /// </summary>
         public Hand() 
         {
+            // setting default value for the default constructor
             HandSize = 5;
             CardsInHand = 0;
             GameHand = new Card[HandSize];

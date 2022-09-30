@@ -59,7 +59,7 @@ Console.WriteLine("------------");
 
 
 
-Deck.Shuffle(); // make sure deck is shuffled for upcoming game hands
+Deck.Shuffle(); // just to make sure deck is shuffled for upcoming game hands
 
 // do while loop to ensure cards being dealt do not exceed deck's limit.
 do
@@ -73,7 +73,7 @@ do
 
     if (UserInput * UserInput2 > Deck.DeckCards.Length) // if statement for if the users hands dealt exceeds decks card limit
     {
-        Console.WriteLine($"\nCARDS DEALT WILL EXCEED 52");
+        Console.WriteLine($"\nCARDS DEALT WILL EXCEED 52, PLEASE TRY AGAIN.");
     } 
 
 } while (UserInput * UserInput2 > Deck.DeckCards.Length); // continues to loop if card amount to be dealt is not less than 52.
@@ -89,12 +89,14 @@ for (int i = 0; i < UserInput; i++)
     
  
 }
-Console.WriteLine("------------");
-Console.WriteLine();
+
+Console.WriteLine("Program has ended, press any key to exit. ");
+Console.ReadKey();
+
 
 ////////////////////////////////////////////////////////
 ///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class :)
-
+/*
 Deck.Shuffle();
 Console.WriteLine();
 Console.WriteLine("------------");
@@ -174,3 +176,4 @@ if (UserInput3 == "y" || UserInput3 == "Y")
 
 }
 
+*/

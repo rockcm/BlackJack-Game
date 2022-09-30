@@ -135,10 +135,7 @@ namespace Project2
         }
 
 
-        public int CardsLeft()
-        {
-            return 52 - NextCard;
-        }
+      
 
         /// <summary>
         /// To string that makes our deck readable and displayable to the user.
