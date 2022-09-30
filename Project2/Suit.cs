@@ -13,10 +13,6 @@
 //////////
 
 
-/// <summary>
-/// enum that sets up our Suit values for the cards
-/// 
-/// </summary>
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -25,6 +21,10 @@ using System.Threading.Tasks;
 
 namespace Project2
 {
+    /// <summary>
+    /// enum that sets up our Suit values for the cards
+    /// 
+    /// </summary>
     public enum Suit
     {
         Clubs, // listing out each suit that the cards can be. 

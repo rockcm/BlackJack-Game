@@ -55,7 +55,7 @@ Console.WriteLine(Deck2.DealAHand(7));
 
 // just to keep code clean
 Console.WriteLine("------------");
-Console.WriteLine();
+
 
 
 
@@ -64,16 +64,16 @@ Deck.Shuffle(); // make sure deck is shuffled for upcoming game hands
 // do while loop to ensure cards being dealt do not exceed deck's limit.
 do
 {
-    Console.WriteLine("How many players are there? "); // prompts user for amount of players and stores that in a variable. 
+    Console.WriteLine($"\nHow many players are there? "); // prompts user for amount of players and stores that in a variable. 
     UserInput = Convert.ToInt32(Console.ReadLine());
 
 
-    Console.WriteLine("How many cards are in each Hand? "); // prompts user for amount of cards in each hand and stores that in a variable. 
+    Console.WriteLine("\nHow many cards are in each Hand? "); // prompts user for amount of cards in each hand and stores that in a variable. 
     UserInput2 = Convert.ToInt32(Console.ReadLine());
 
     if (UserInput * UserInput2 > Deck.DeckCards.Length) // if statement for if the users hands dealt exceeds decks card limit
     {
-        Console.WriteLine("CARDS DEALT WILL EXCEED 52");
+        Console.WriteLine($"\nCARDS DEALT WILL EXCEED 52");
     } 
 
 } while (UserInput * UserInput2 > Deck.DeckCards.Length); // continues to loop if card amount to be dealt is not less than 52.

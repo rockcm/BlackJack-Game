@@ -60,7 +60,7 @@ namespace Project2
         /// <param name="ExistingDeck"> A value for a deck object that has already been created to pass to the copy constructor</param>
         public Deck(Deck ExistingDeck)
         {
-
+            NextCard = 0;
             DeckCards = new Card[52];// makes DeckCards a card array of size 52.
             for (int i = 0; i < DeckCards.Length; i++) // for loop for deep copy
             {
