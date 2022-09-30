@@ -93,7 +93,7 @@ namespace Project2
         public override string ToString()
         {
             string msg = "";
-            foreach (Card c in GameHand) // prints each card in the gamehand 
+            foreach (Card c in GameHand) // prints each card in the card array to the screen. 
             {
                 msg += $"\n{c.ToString()}";
             }
