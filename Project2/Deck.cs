@@ -57,7 +57,7 @@ namespace Project2
         /// <summary>
         /// Copy constructor that takes an existing deck as a parameter and copys it to another card array.  
         /// </summary>
-        /// <param name="ExistingDeck"> A value for a deck object that has already been created to pass to the copy constructor</param>
+        /// <param name="ExistingDeck"> The value of a deck that has already been created and will be passed to the constructor to create a new deck of the same values.</param>
         public Deck(Deck ExistingDeck)
         {
             NextCard = 0;
@@ -123,15 +123,15 @@ namespace Project2
         {
 
 
-            Hand Hand1 = new Hand(handSize);
-            for (int i = 0; i < handSize; i++)
+            Hand Hand1 = new Hand(handSize); // creates a hand with the size indicated by user input
+            for (int i = 0; i < handSize; i++) // loop to fill the hand with cards.
             {
 
                 Hand1.AddCard(DealACard());
                 
             }
 
-            return Hand1;
+            return Hand1; // returns the hand after it has been filled with cards. 
         }
 
 

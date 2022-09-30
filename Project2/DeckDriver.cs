@@ -6,7 +6,7 @@
 // Description: Lab1 
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
-// Created: 08/31/22
+// Created:  09/21/2022
 // Copyright: Christian Rock, 2022
 //
 ////////////////////////////////////////////////////////////////////////////////////////////////////////
@@ -33,6 +33,7 @@ int UserInput2; // input for the amount of cards in each players hand.
 
 /// Displays the deck object. 
 Console.WriteLine(Deck);
+
 /// Shuffles the deck and then displays the shuffled deck. 
 Deck.Shuffle();
 Console.WriteLine("------------");
@@ -90,7 +91,8 @@ for (int i = 0; i < UserInput; i++)
  
 }
 
-Console.WriteLine("Program has ended, press any key to exit. ");
+//exit message 
+Console.WriteLine("\nThank you for using my program. \nThe program has ended, press any key to exit. ");
 Console.ReadKey();
 
 

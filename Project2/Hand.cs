@@ -51,6 +51,7 @@ namespace Project2
         /// <param name="handSize"> the value that will be used to determine what the hand size is </param>
         public Hand(int handSize)
         {
+            //setting values for parameterized constructor. 
             CardsInHand = 0;
             HandSize = handSize;
             GameHand = new Card[handSize];
@@ -61,7 +62,7 @@ namespace Project2
         /// <summary>
         /// Copy constructor for the hand class that takes in a existing hand and copys those values to a new hand. 
         /// </summary>
-        /// <param name="existingHand"></param>
+        /// <param name="existingHand">The value of a hand that has already been created and will be passed to the constructor to create a new hand of the same value.</param>
         public Hand(Hand existingHand)
         {
             HandSize = existingHand.HandSize;
@@ -74,7 +75,7 @@ namespace Project2
         }
 
         /// <summary>
-        /// Method that is uesd to add a card to a hand, used in the DealAHand method.
+        /// Method that adds a card to the game hand, this is used in DealAHand to deal a hand from the deck. 
         /// </summary>
         /// <param name="Card"> the value of the card that is getting added to the hand.</param>
         public void AddCard(Card Card)
