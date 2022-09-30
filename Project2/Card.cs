@@ -3,7 +3,7 @@
 //
 // Project: Project2
 // File Name: Card.cs
-// Description: Ceates a Card
+// Description: Ceates a Card object from face and suit enums
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
 // Created: 08/31/22
@@ -26,7 +26,7 @@ using System.Threading.Tasks;
 namespace Project2
 {
     /// <summary>
-    /// Card class that creates a card object for further use in a deck. 
+    /// Card class that creates a card object for further use in a deck. uses face and suit to enums. 
     /// </summary>
     public class Card
     {

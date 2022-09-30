@@ -3,7 +3,7 @@
 //
 // Project: Project2
 // File Name: Suit.cs
-// Description: Enum suits, has availbles suites in file.
+// Description: Enum suits, has availble suite values in file.
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
 // Created: 08/31/22

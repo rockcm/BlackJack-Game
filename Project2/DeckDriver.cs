@@ -3,7 +3,7 @@
 //
 // Project: Project2
 // File Name: DeckDriver.cs
-// Description: Lab1 
+// Description: Driver class that demonstrates functionality of deck, card and hand classes. 
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
 // Created:  09/21/2022
@@ -30,14 +30,14 @@ Deck Deck = new Deck(); /// Creates a new Deck object.
 int UserInput; // input for the amount of players 
 int UserInput2; // input for the amount of cards in each players hand.
 
-
 /// Displays the deck object. 
+Console.WriteLine("Original Deck of Cards:");
 Console.WriteLine(Deck);
 
 /// Shuffles the deck and then displays the shuffled deck. 
 Deck.Shuffle();
 Console.WriteLine("------------");
-Console.WriteLine("Shuffled Deck:");
+Console.WriteLine("Shuffled Deck of Cards:");
 Console.WriteLine(Deck);
 
 Console.WriteLine("------------");
@@ -46,12 +46,12 @@ Console.WriteLine("------------");
 Deck Deck2 = new Deck(Deck);
 
 /// 1st hand dealt from 2nd deck.  
-Console.WriteLine("Hand 1:");
+Console.WriteLine("Hand 1 from copy deck:");
 Console.WriteLine(Deck2.DealAHand(7));
 
 /// 2nd hand dealt from 2nd deck.
 Console.WriteLine("------------");
-Console.WriteLine("Hand 2:");
+Console.WriteLine("Hand 2 from copy deck:");
 Console.WriteLine(Deck2.DealAHand(7));
 
 // just to keep code clean

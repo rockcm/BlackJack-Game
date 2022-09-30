@@ -30,7 +30,7 @@ namespace Project2
     {
         public Card[] GameHand { get; set; } // Creating a card array attribute
         public int HandSize { get; set; } // integer attribute to dictate hand size. 
-        public int CardsInHand { get; set; } // integer attribute to keep track of how many cards have been dealt to a hand/
+        public int CardsInHand { get; set; } // integer attribute to keep track of how many cards have been dealt to a hand.
 
 
         /// <summary>
