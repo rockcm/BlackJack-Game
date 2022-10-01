@@ -95,11 +95,11 @@ for (int i = 0; i < UserInput; i++)
 //exit message 
 Console.WriteLine("\nThank you for using my program. \nThe program has ended, press any key to exit. ");
 Console.ReadKey();
-*/
+
 
 ////////////////////////////////////////////////////////
 ///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class :)
-
+*/
 // shuffles deck for upcoming game.
 Deck.Shuffle();
 Console.WriteLine();
