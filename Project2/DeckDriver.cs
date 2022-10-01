@@ -30,6 +30,7 @@ Deck Deck = new Deck(); /// Creates a new Deck object.
 int UserInput; // input for the amount of players 
 int UserInput2; // input for the amount of cards in each players hand.
 
+/*
 /// Displays the deck object. 
 Console.WriteLine("Original Deck of Cards:");
 Console.WriteLine(Deck);
@@ -94,7 +95,7 @@ for (int i = 0; i < UserInput; i++)
 //exit message 
 Console.WriteLine("\nThank you for using my program. \nThe program has ended, press any key to exit. ");
 Console.ReadKey();
-
+*/
 
 ////////////////////////////////////////////////////////
 ///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class :)
@@ -106,7 +107,8 @@ Console.WriteLine("------------");
 Console.WriteLine("Dealer's Hand");
 string dealers = "";
 int counter = 0;
-
+string userinput5;
+string userinput6;
 do
 {
  
@@ -139,19 +141,35 @@ do
 Console.WriteLine(players);
 
 
-
+string userinput4;
 string UserInput3 = "";
 Console.WriteLine("do you want to hit?");
 UserInput3 = Console.ReadLine();
 string msg = "";
 if (UserInput3 == "n" || UserInput3 == "N")
 {
-    Console.WriteLine("FINAL HANDS");
-    Console.WriteLine($"Dealers Hand: \n{dealers}\n");
-    Console.WriteLine($"Players Hand:\n{players}");
-    Console.WriteLine();
-    Console.WriteLine("Your game is completed.");
-
+    do
+    {
+        Console.WriteLine("HANDS AFTER FIRST ROUND");
+        Console.WriteLine($"Dealers Hand: \n{dealers}\n");
+        Console.WriteLine($"Players Hand:\n{players}");
+        Console.WriteLine();
+        Console.WriteLine("dealer must hit till 17. Should Dealer hit again?");
+        userinput4 = Console.ReadLine();
+        if (userinput4 == "n" || userinput4 == "N")
+        {
+            Console.WriteLine("FINAL HANDS");
+            Console.WriteLine($"Dealers Hand: \n{dealers}\n");
+            Console.WriteLine($"Players Hand:\n{players}");
+            Console.WriteLine();
+            Console.WriteLine("Your game is completed.");
+        }
+        else if (userinput4 == "Y" || userinput4 == "y")
+        {
+            dealers += $"\n{Deck.DealACard()}";
+            Console.WriteLine(dealers);
+        }
+    }while(userinput4 == "n" || userinput4 == "N");
 }
 if (UserInput3 == "y" || UserInput3 == "Y")
 {
@@ -160,21 +178,61 @@ if (UserInput3 == "y" || UserInput3 == "Y")
     {
         players += $"\n{Deck.DealACard()}";
         Console.WriteLine(players);
-        
+
         Console.WriteLine("do you want to hit?");
         UserInput3 = Console.ReadLine();
         Console.ReadKey();
         if (UserInput3 == "n" || UserInput3 == "N")
+        {
+            do
+            {
+                Console.WriteLine("HANDS AFTER FIRST ROUND");
+                Console.WriteLine($"Dealers Hand: \n{dealers}\n");
+                Console.WriteLine($"Players Hand:\n{players}");
+                Console.WriteLine();
+                Console.WriteLine("dealer must hit till 17. Should Dealer hit again?");
+                userinput4 = Console.ReadLine();
+                if (userinput4 == "n" || userinput4 == "N")
+                {
+                    Console.WriteLine("FINAL HANDS");
+                    Console.WriteLine($"Dealers Hand: \n{dealers}\n");
+                    Console.WriteLine($"Players Hand:\n{players}");
+                    Console.WriteLine();
+                    Console.WriteLine("Your game is completed.");
+                }
+                else if (userinput4 == "Y" || userinput4 == "y")
+                {
+                    dealers += $"\n{Deck.DealACard()}";
+                    Console.WriteLine(dealers);
+                }
+            } while (userinput4 == "Y" || userinput4 == "y");
+        }
+    }
+    while (UserInput3 == "y" || UserInput3 == "Y");
+}
+    /*
+    do
+    {
+        Console.WriteLine("HANDS AFTER FIRST ROUND");
+        Console.WriteLine($"Dealers Hand: \n{dealers}\n");
+        Console.WriteLine($"Players Hand:\n{players}");
+        Console.WriteLine();
+        Console.WriteLine("dealer must hit till 17. Should Dealer hit again?");
+        userinput4 = Console.ReadLine();
+        if (userinput4 == "n" || userinput4 == "N")
         {
             Console.WriteLine("FINAL HANDS");
             Console.WriteLine($"Dealers Hand: \n{dealers}\n");
             Console.WriteLine($"Players Hand:\n{players}");
             Console.WriteLine();
             Console.WriteLine("Your game is completed.");
-
         }
-    }
-    while (UserInput3 == "y" || UserInput3 == "Y");
+        else if (userinput4 == "Y" || userinput4 == "y")
+        {
+            dealers += Deck.DealACard();
+            Console.WriteLine(dealers);
+        }
+    } while (userinput4 == "n" || userinput4 == "N");
 
 }
-
+    */
