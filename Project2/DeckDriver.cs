@@ -96,3 +96,85 @@ Console.WriteLine("\nThank you for using my program. \nThe program has ended, pr
 Console.ReadKey();
 
 
+////////////////////////////////////////////////////////
+///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class :)
+
+Deck.Shuffle();
+Console.WriteLine();
+Console.WriteLine("------------");
+
+Console.WriteLine("Dealer's Hand");
+string dealers = "";
+int counter = 0;
+
+do
+{
+ 
+    dealers += $"\n{Deck.DealACard()}";
+
+    counter++;
+    if(counter == 1)
+    {
+        Console.WriteLine($"One hidden card " +
+            $"              {dealers}");
+    }
+} while (counter < 2);
+
+
+
+
+Console.WriteLine("------------");
+Console.WriteLine("Player Hand");
+string players ="";
+int counter2 = 0;
+do
+{
+   
+    players += $"\n{Deck.DealACard()}";
+
+    counter2++;
+    
+
+} while (counter2 < 2);
+Console.WriteLine(players);
+
+
+
+string UserInput3 = "";
+Console.WriteLine("do you want to hit?");
+UserInput3 = Console.ReadLine();
+string msg = "";
+if (UserInput3 == "n" || UserInput3 == "N")
+{
+    Console.WriteLine("FINAL HANDS");
+    Console.WriteLine($"Dealers Hand: \n{dealers}\n");
+    Console.WriteLine($"Players Hand:\n{players}");
+    Console.WriteLine();
+    Console.WriteLine("Your game is completed.");
+
+}
+if (UserInput3 == "y" || UserInput3 == "Y")
+{
+
+    do
+    {
+        players += $"\n{Deck.DealACard()}";
+        Console.WriteLine(players);
+        
+        Console.WriteLine("do you want to hit?");
+        UserInput3 = Console.ReadLine();
+        Console.ReadKey();
+        if (UserInput3 == "n" || UserInput3 == "N")
+        {
+            Console.WriteLine("FINAL HANDS");
+            Console.WriteLine($"Dealers Hand: \n{dealers}\n");
+            Console.WriteLine($"Players Hand:\n{players}");
+            Console.WriteLine();
+            Console.WriteLine("Your game is completed.");
+
+        }
+    }
+    while (UserInput3 == "y" || UserInput3 == "Y");
+
+}
+

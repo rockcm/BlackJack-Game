@@ -3,7 +3,7 @@
 //
 // Project: Project2
 // File Name: Face.cs
-// Description: Enum suits, has availbles face values in file.
+// Description: Enum faces, has availbles face values in file.
 // Course: CSCI 1260 – Introduction to Computer Science II
 // Author: Christian Rock
 // Created: 08/31/22
