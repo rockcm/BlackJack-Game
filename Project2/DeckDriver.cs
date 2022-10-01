@@ -100,15 +100,17 @@ Console.ReadKey();
 ////////////////////////////////////////////////////////
 ///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class :)
 
+// shuffles deck for upcoming game.
 Deck.Shuffle();
 Console.WriteLine();
 Console.WriteLine("------------");
 
+//string for dealers hand
 Console.WriteLine("Dealer's Hand");
-string dealers = "";
+string dealers = ""; 
 int counter = 0;
-string userinput5;
-string userinput6;
+
+// do while loop to create 2 cards for dealers hand but only show 1.
 do
 {
  
@@ -124,11 +126,13 @@ do
 
 
 
-
+// string for players hand.
 Console.WriteLine("------------");
 Console.WriteLine("Player Hand");
 string players ="";
 int counter2 = 0;
+
+//do while loop to create players hand and shows it to player.
 do
 {
    
@@ -141,16 +145,20 @@ do
 Console.WriteLine(players);
 
 
+
 string userinput4;
 string UserInput3 = "";
+
+// asks user if they want to hit after seeing thier first 2 cards.
 Console.WriteLine("do you want to hit?");
 UserInput3 = Console.ReadLine();
 string msg = "";
-if (UserInput3 == "n" || UserInput3 == "N")
+
+if (UserInput3 == "n" || UserInput3 == "N") // if statement for if the user does not want to hit. 
 {
-    do
+    do // loop to show the hands after the first cards are dealt and prompts user to make dealer hit till 17 or bust. Displays final hands after completion.
     {
-        Console.WriteLine("HANDS AFTER FIRST ROUND");
+        Console.WriteLine("HANDS AFTER PLAYER ROUND");
         Console.WriteLine($"Dealers Hand: \n{dealers}\n");
         Console.WriteLine($"Players Hand:\n{players}");
         Console.WriteLine();
@@ -171,10 +179,11 @@ if (UserInput3 == "n" || UserInput3 == "N")
         }
     }while(userinput4 == "n" || userinput4 == "N");
 }
-if (UserInput3 == "y" || UserInput3 == "Y")
+
+if (UserInput3 == "y" || UserInput3 == "Y") // if statement for if the user would like to "hit" aka add a card to their hand.
 {
 
-    do
+    do // do while loop to ask user if they would like to hit again after first initital hit. 
     {
         players += $"\n{Deck.DealACard()}";
         Console.WriteLine(players);
@@ -182,11 +191,11 @@ if (UserInput3 == "y" || UserInput3 == "Y")
         Console.WriteLine("do you want to hit?");
         UserInput3 = Console.ReadLine();
         Console.ReadKey();
-        if (UserInput3 == "n" || UserInput3 == "N")
+        if (UserInput3 == "n" || UserInput3 == "N") // if statement for if the user does not want to hit anymore.
         {
-            do
+            do // loop to show the hands after the first cards are dealt and prompts user to make dealer hit till 17 or bust. Displays final hands after completion.
             {
-                Console.WriteLine("HANDS AFTER FIRST ROUND");
+                Console.WriteLine("HANDS AFTER PLAYER ROUND");
                 Console.WriteLine($"Dealers Hand: \n{dealers}\n");
                 Console.WriteLine($"Players Hand:\n{players}");
                 Console.WriteLine();
