@@ -114,7 +114,7 @@ do
 
 
 
-    Console.WriteLine("Dealer's Hand");
+    Console.WriteLine("Dealer's Hand: ");
 
 
     // do while loop to create 2 cards for dealers hand but only show 1.
@@ -127,7 +127,7 @@ do
         if (counter == 1)
         {
             Console.WriteLine($"\nOne Hidden Card " +
-                $"              {dealers}");
+                $"              {dealers} ");
         }
     } while (counter < 2);
 
@@ -135,7 +135,7 @@ do
 
     // string for players hand.
     Console.WriteLine("------------");
-    Console.WriteLine("Player Hand");
+    Console.WriteLine("Player Hand: ");
     string players = "";
     int counter2 = 0;
 
@@ -157,7 +157,7 @@ do
     string UserInput3 = "";
 
     // asks user if they want to hit after seeing thier first 2 cards.
-    Console.WriteLine("\ndo you want to hit?");
+    Console.WriteLine("\nDo you want to hit? (Y or N): ");
     UserInput3 = Console.ReadLine();
     string msg = "";
 
@@ -169,7 +169,7 @@ do
             Console.WriteLine($"\nDealers Hand: \n{dealers}\n");
             Console.WriteLine($"\nPlayers Hand:\n{players}");
             Console.WriteLine();
-            Console.WriteLine("dealer must hit till 17. Should Dealer hit again?");
+            Console.WriteLine("Dealer must hit till 17. Should Dealer hit again? (Y or N): ");
             userinput4 = Console.ReadLine();
             if (userinput4 == "n" || userinput4 == "N")
             {
@@ -197,9 +197,9 @@ do
             players += $"\n{Deck.DealACard()}";
             Console.WriteLine($"\nPlayers Hand: \n{players}");
 
-            Console.WriteLine("\ndo you want to hit?");
+            Console.WriteLine("\ndo you want to hit? (Y or N): ");
             UserInput3 = Console.ReadLine();
-            Console.ReadKey();
+            
             if (UserInput3 == "n" || UserInput3 == "N") // if statement for if the user does not want to hit anymore.
             {
                 do // loop to show the hands after the first cards are dealt and prompts user to make dealer hit till 17 or bust. Displays final hands after completion.
@@ -208,7 +208,7 @@ do
                     Console.WriteLine($"\nDealers Hand: \n{dealers}\n");
                     Console.WriteLine($"\nPlayers Hand:\n{players}");
                     Console.WriteLine();
-                    Console.WriteLine("dealer must hit till 17. Should Dealer hit again?");
+                    Console.WriteLine("Dealer must hit till 17. Should Dealer hit again? (Y or N): ");
                     userinput4 = Console.ReadLine();
                     if (userinput4 == "n" || userinput4 == "N")
                     {
@@ -228,7 +228,7 @@ do
         }
         while (UserInput3 == "y" || UserInput3 == "Y");
 
-        Console.WriteLine("do you want to play again?");
+        Console.WriteLine("\nDo you want to play again? (Y or N): ");
         PlayAgain = Console.ReadLine();
     }
 } while (PlayAgain == "Y" || PlayAgain == "y");
