@@ -95,11 +95,11 @@ for (int i = 0; i < UserInput; i++)
 //exit message 
 Console.WriteLine("\nThank you for using my program. \nThe program has ended, press any key to exit. ");
 Console.ReadKey();
-
+*/
 
 ////////////////////////////////////////////////////////
 ///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class :)
-*/
+
 // shuffles deck for upcoming game.
 Deck.Shuffle();
 Console.WriteLine();
@@ -110,6 +110,7 @@ Console.WriteLine("Dealer's Hand");
 string dealers = ""; 
 int counter = 0;
 
+
 // do while loop to create 2 cards for dealers hand but only show 1.
 do
 {
@@ -119,7 +120,7 @@ do
     counter++;
     if(counter == 1)
     {
-        Console.WriteLine($"\nOne hidden card " +
+        Console.WriteLine($"\nOne Hidden Card " +
             $"              {dealers}");
     }
 } while (counter < 2);

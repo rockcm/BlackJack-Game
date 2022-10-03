@@ -43,6 +43,7 @@ namespace Project2
             CardsInHand = 0;
             GameHand = new Card[HandSize];
             
+            
         }
 
         /// <summary>
@@ -55,7 +56,7 @@ namespace Project2
             CardsInHand = 0;
             HandSize = handSize;
             GameHand = new Card[handSize];
-           
+        
 
         }
 
