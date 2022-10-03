@@ -184,7 +184,8 @@ do
                 Console.WriteLine();
                 Console.WriteLine("Your game is completed.");
                 Console.WriteLine("\ndo you want to play again?");
-                PlayAgain = Console.ReadLine();
+                PlayAgain = Console.ReadLine();//good
+                Console.Clear();
             }
             else if (userinput4 == "Y" || userinput4 == "y")
             {
@@ -222,6 +223,7 @@ do
                         Console.WriteLine($"\nPlayers Hand:\n{players}");
                         Console.WriteLine();
                         Console.WriteLine("Your game is completed.");
+                      
                     }
                     else if (userinput4 == "Y" || userinput4 == "y")
                     {
