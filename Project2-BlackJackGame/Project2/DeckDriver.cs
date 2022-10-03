@@ -101,11 +101,13 @@ Console.ReadKey();
 ///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class :)
 
 // shuffles deck for upcoming game.
+
 Deck.Shuffle();
 Console.WriteLine();
 string PlayAgain = "";
 do 
-{ 
+{
+    Deck.Shuffle();
     Console.WriteLine("------------");
     string dealers = "";
     int counter = 0;
@@ -151,15 +153,18 @@ do
     } while (counter2 < 2);
     Console.WriteLine(players);
 
-
+   
 
     string userinput4;
     string UserInput3 = "";
 
+
     // asks user if they want to hit after seeing thier first 2 cards.
-    Console.WriteLine("\nDo you want to hit? (Y or N): ");
-    UserInput3 = Console.ReadLine();
-    string msg = "";
+ 
+        Console.WriteLine("\nDo you want to hit? (Y or N): ");
+        UserInput3 = Console.ReadLine();
+   
+   
 
     if (UserInput3 == "n" || UserInput3 == "N") // if statement for if the user does not want to hit. 
     {
@@ -230,6 +235,7 @@ do
 
         Console.WriteLine("\nDo you want to play again? (Y or N): ");
         PlayAgain = Console.ReadLine();
+        Console.Clear();
     }
 } while (PlayAgain == "Y" || PlayAgain == "y");
 
