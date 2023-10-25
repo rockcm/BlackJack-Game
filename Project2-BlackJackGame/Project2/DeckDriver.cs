@@ -97,8 +97,10 @@ Console.WriteLine("\nThank you for using my program. \nThe program has ended, pr
 Console.ReadKey();
 */
 
-////////////////////////////////////////////////////////
-///Created black jack game. Based off lab 2 will create a new one for project 2 when I have time. Will try to implement hand class 
+
+
+
+/// Game is designed to quickly simulate hands of blackjack that could be dealt at a casino. 
 
 // shuffles deck for upcoming game.
 
@@ -183,7 +185,7 @@ do
                 Console.WriteLine($"Dealers Hand: \n{dealers}\n");
                 Console.WriteLine($"Players Hand:\n{players}");
                 Console.WriteLine();
-                Console.WriteLine("Your game is completed.");
+                Console.WriteLine("Your game is completed. Please determine winner. Automation to be added later. :)");
                 Console.WriteLine("\ndo you want to play again?"); // asks player if they want to play again and store in variable. 
                 PlayAgain = Console.ReadLine();
                 Console.Clear(); // clears console for new game
@@ -223,7 +225,7 @@ do
                         Console.WriteLine($"\nDealers Hand: \n{dealers}\n");
                         Console.WriteLine($"\nPlayers Hand:\n{players}");
                         Console.WriteLine();
-                        Console.WriteLine("Your game is completed.");
+                        Console.WriteLine("Your game is completed. Please determine winner. Automation to be added later. :)");
                       
                     }
                     else if (userinput4 == "Y" || userinput4 == "y") // adds card to dealers hand if selected 
