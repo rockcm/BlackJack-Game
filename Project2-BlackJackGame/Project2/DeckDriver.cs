@@ -211,7 +211,7 @@ do
             
             if (UserInput3 == "n" || UserInput3 == "N") // if statement for if the user does not want to hit anymore.
             {
-                do // loop to show the hands after the first cards are dealt and prompts user to make dealer hit till 17 or bust. Displays final hands after completion.
+                do // loop to show the hands after the first cards are dealt and prompts user to make dealer hit till 17 or bust. Displays final hands after completion..
                 {
                     Console.WriteLine("\nHANDS AFTER PLAYER ROUND");
                     Console.WriteLine($"\nDealers Hand: \n{dealers}\n");
